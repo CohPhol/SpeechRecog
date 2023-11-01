@@ -1,6 +1,7 @@
 FILE_PATH_RECORDINGS = "recordings/"
 FILE_NAME_WAV = "sample.wav"
-FILE_NAME_MP4 = "nani.mp4"
+OUTPUT_ONE = "output1.mp4"
+OUTPUT_TWO = "output2.mp4"
 FILE_NAME_MKV = "vid.mkv"
 
 FILE_PATH_SPEECH = "speech/"
