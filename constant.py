@@ -1,5 +1,7 @@
-file_path_recordings = "recordings/"
-file_name_wav = "sample.wav"
+FILE_PATH_RECORDINGS = "recordings/"
+FILE_NAME_WAV = "sample.wav"
+FILE_NAME_MP4 = "nani.mp4"
+FILE_NAME_MKV = "vid.mkv"
 
-file_path_speech = "speech/"
-file_name_text = "sample.txt"
+FILE_PATH_SPEECH = "speech/"
+FILE_NAME_TXT = "sample.txt"

@@ -19,7 +19,7 @@ except Exception as e:
    print(e)
 
 # Write audio to a WAV file
-with open(constant.file_path_recordings + constant.file_name_wav, "wb") as f:
+with open(constant.FILE_PATH_RECORDINGS + constant.FILE_NAME_WAV, "wb") as f:
    f.write(audio.get_wav_data())
 
 # Store speech in a string variable
@@ -38,5 +38,5 @@ for i in text_list:
       output = output + i + " "
 
 # Write audio to a text file
-with open(constant.file_path_speech + constant.file_name_text, "w") as f:
+with open(constant.FILE_PATH_SPEECH + constant.FILE_NAME_TXT, "w") as f:
    f.write(output)
