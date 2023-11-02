@@ -8,8 +8,8 @@ import pygame
 
 def writeToFile(text):
    # Write audio to a text file
-   with open(constant.FILE_PATH_SPEECH + constant.FILE_NAME_TXT, "w") as f:
-      f.write(text)
+   with open(constant.FILE_PATH_SPEECH + constant.FILE_NAME_TXT, "a") as f:
+      f.write('{0}\n'.format(text))
 
 def saveToWAVFile(audio):
    # Write audio to a WAV file
@@ -22,17 +22,17 @@ def wordToNum(text_list):
          output = output + str(w2n.word_to_num(i)) + " "
       except:
          output = output + i + " "
-   return output
 
 def playClip(file_path):
    clip = mp.VideoFileClip(file_path).subclip(0, 5)
-   print("Playing the video: {0}".format(clip.filename))
+   print('Playing the video: {0}'.format(clip.filename))
    clip.preview()
    pygame.quit()
 
 
 # Create variable to have speech recognition
 recording = sr.Recognizer()
+recording.energy_threshold = 4000
 
 while True:
    with sr.Microphone() as source:
@@ -50,6 +50,10 @@ while True:
       text = recording.recognize_google(audio)
       text = text.lower()
       text_list = text.split()
+
+      # saveToWAVFile(audio)
+      # writeToFile(text)
+
 
       if 'quit' in text_list:
          break
